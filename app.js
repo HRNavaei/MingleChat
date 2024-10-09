@@ -8,8 +8,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.use((req, res, next) => {
-  console.log('Hello!');
-  console.log(req.body);
+  res.json({
+    a: 'Hello!',
+    b: req.body,
+  });
+  next();
 });
 
 module.exports = app;
