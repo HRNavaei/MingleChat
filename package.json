@@ -1,5 +1,5 @@
 {
-  "name": "cactus",
+  "name": "chattycactus",
   "version": "1.0.0",
   "description": "A great web app for chatting ",
   "main": "server.js",
@@ -25,5 +25,6 @@
     "mongoose": "^8.7.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.7"
-  }
+  },
+  "devDependencies": {}
 }
