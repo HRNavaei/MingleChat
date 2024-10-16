@@ -1,4 +1,6 @@
-const schema = new mongoose.Schema({
+import mongoose from 'mongoose';
+
+const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: [true, 'Please provide the first name'],
@@ -13,11 +15,11 @@ const schema = new mongoose.Schema({
     unique: true,
   },
   messagedUsers: {
-    type: [String],
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: userSchema }],
     default: [],
   },
 });
 
-const User = mongoose.model('User', schema);
+const User = mongoose.model('User', userSchema);
 
 export default User;
