@@ -14,8 +14,8 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please provide the username'],
     unique: true,
   },
-  messagedUsers: {
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  involvedChats: {
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chat' }],
     default: [],
   },
 });

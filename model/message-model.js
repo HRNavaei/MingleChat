@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const schema = mongoose.Schema({
+const messageSchema = mongoose.Schema({
   senderUserId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -17,6 +17,6 @@ const schema = mongoose.Schema({
   },
 });
 
-const Message = mongoose.model('Message', schema);
+const Message = mongoose.model('Message', messageSchema);
 
 export default Message;
