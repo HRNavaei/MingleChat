@@ -1,5 +1,5 @@
 {
-  "name": "mingle",
+  "name": "mingle-chat",
   "version": "1.0.0",
   "description": "A great web app for chatting ",
   "main": "server.js",
