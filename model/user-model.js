@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
   },
   messagedUsers: {
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: userSchema }],
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
     default: [],
   },
 });

@@ -2,11 +2,13 @@ import mongoose from 'mongoose';
 
 const schema = mongoose.Schema({
   senderUserId: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: [true, 'senderUserId is missing'],
   },
   recipientUserId: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: [true, 'recipientUserId is missing'],
   },
   messageText: {
