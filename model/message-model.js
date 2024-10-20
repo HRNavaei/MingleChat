@@ -6,6 +6,11 @@ const messageSchema = mongoose.Schema({
     ref: 'User',
     required: [true, 'senderUserId is missing'],
   },
+  recipientUserId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: [true, 'recipientUserId is missing'],
+  },
   messageText: {
     type: String,
     required: [true, 'messageText is missing'],
